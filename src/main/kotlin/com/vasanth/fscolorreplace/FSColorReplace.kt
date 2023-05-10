@@ -10,7 +10,9 @@ class FSColorReplace {
     companion object {
 
         private const val PROJECT_PATH = "/Users/vaannadurai/Workspace/Android/Freshworks/Freshservice Review"
-        const val IS_LIGHT_THEME = false
+        const val COLOR_FILE_PATH =
+            "/Users/vaannadurai/Vasanth/Company/Products/Freshservice/Tech/Dark Theme/Color System - Tokens - Mapping.csv"
+        const val IS_LIGHT_THEME = true
 
         @JvmStatic
         fun main(args: Array<String>) {

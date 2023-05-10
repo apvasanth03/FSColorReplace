@@ -1,6 +1,7 @@
 package com.vasanth.fscolorreplace.helper
 
 import com.opencsv.CSVReader
+import com.vasanth.fscolorreplace.FSColorReplace
 import com.vasanth.fscolorreplace.model.FSColor
 import java.io.FileReader
 
@@ -13,8 +14,8 @@ object ColorReader {
      * Read Colors CSV file and convert it into [FSColor]
      */
     fun readColorsFromFile(): List<FSColor> {
-        val csvReader = CSVReader(FileReader("/Users/vaannadurai/Downloads/Color System - Tokens - Mapping.csv"))
-        
+        val csvReader = CSVReader(FileReader(FSColorReplace.COLOR_FILE_PATH))
+
         val fsColors = csvReader.use {
             val rows = csvReader.readAll()
             val fsColors = rows.mapNotNull {
